@@ -5,7 +5,7 @@ export default function Header({ isDark, toggleTheme }) {
     <div className="flex justify-between items-start mb-2">
       <div>
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Open Direct WhatsApp</h2>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">Abre WhatsApp, genera plantillas, enlaces y códigos QR</p>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">Abre WhatsApp sin guardar contactos</p>
       </div>
       <button 
         onClick={toggleTheme} 
