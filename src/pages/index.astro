@@ -1,0 +1,63 @@
+---
+import OpenDirectChat from '../components/OpenDirectChat.jsx';
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>WhatsApp Directo | Chatea sin guardar el contacto</title>
+    
+    <meta name="description" content="Inicia un chat de WhatsApp al instante sin necesidad de agregar el número a tu agenda. Herramienta gratuita, segura y rápida. Incluye plantillas y QR." />
+    
+    <meta name="keywords" content="whatsapp directo, enviar whatsapp sin agregar, chat sin contacto, whatsapp web directo, abrir whatsapp sin guardar, api whatsapp" />
+    
+    <meta name="theme-color" content="#22c55e" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-proyecto.vercel.app/" /> <meta property="og:site_name" content="WhatsApp Directo" />
+    
+    <meta property="og:title" content="🚀 Enviar WhatsApp sin guardar contacto" />
+    <meta property="og:description" content="No llenes tu agenda de números que solo usarás una vez. Abre el chat directo aquí. Gratis y sin registro." />
+    
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="WhatsApp Directo - Rápido y Sin Contactos" />
+    <meta property="twitter:description" content="Abre conversaciones de WhatsApp sin guardar el número. Ideal para ventas, delivery o mensajes rápidos." />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "WhatsApp Directo",
+        "description": "Herramienta para abrir chats de WhatsApp sin guardar el contacto en la agenda telefónica.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <script is:inline>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  
+  <body class="bg-slate-100 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+    
+    <OpenDirectChat client:load />
+
+  </body>
+</html>
