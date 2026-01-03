@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const AdBanner = ({ slotId, format = 'auto', responsive = 'true', className = '', isDebug = true }) => {
+const AdBanner = ({ slotId, format = 'auto', responsive = 'true', className = '', isDebug = false }) => {
     useEffect(() => {
         if (!isDebug) {
             try {
@@ -23,7 +23,7 @@ const AdBanner = ({ slotId, format = 'auto', responsive = 'true', className = ''
         <ins
             className={`adsbygoogle ${className}`}
             style={{ display: 'block' }}
-            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // Reemplazar con ID real
+            data-ad-client="ca-pub-4659199146828242"
             data-ad-slot={slotId}
             data-ad-format={format}
             data-full-width-responsive={responsive}
