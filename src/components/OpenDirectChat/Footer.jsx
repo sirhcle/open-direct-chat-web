@@ -20,6 +20,7 @@ export default function Footer() {
             href={androidUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Disponible en Google Play"
             className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md"
           >
             {/* Icono Play Store */}
@@ -35,6 +36,7 @@ export default function Footer() {
             href={iosUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Consíguelo en App Store"
             className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md"
           >
             {/* Icono Apple */}
@@ -53,6 +55,7 @@ export default function Footer() {
         href="https://buymeacoffee.com/sirhcleapps"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Invítame un café"
         className="flex items-center gap-2 text-xs text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors font-medium pt-2"
       >
         <svg

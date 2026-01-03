@@ -1,6 +1,6 @@
 ---
-import OpenDirectChat from '../components/OpenDirectChat.jsx';
-
+import OpenDirectChat from "../components/OpenDirectChat.jsx";
+import AdBanner from "../components/AdBanner.jsx";
 ---
 
 <html lang="es">
@@ -9,26 +9,50 @@ import OpenDirectChat from '../components/OpenDirectChat.jsx';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <title>WhatsApp Directo | Chatea sin guardar el contacto</title>
-    
-    <meta name="description" content="Inicia un chat de WhatsApp al instante sin necesidad de agregar el número a tu agenda. Herramienta gratuita, segura y rápida. Incluye plantillas y QR." />
-    
-    <meta name="keywords" content="whatsapp directo, enviar whatsapp sin agregar, chat sin contacto, whatsapp web directo, abrir whatsapp sin guardar, api whatsapp" />
-    
+
+    <meta
+      name="description"
+      content="Inicia un chat de WhatsApp al instante sin necesidad de agregar el número a tu agenda. Herramienta gratuita, segura y rápida. Incluye plantillas y códigos QR."
+    />
+    <link rel="canonical" href="https://opendirectchat.vercel.app/" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="keywords"
+      content="whatsapp directo, enviar whatsapp sin agregar, chat sin contacto, whatsapp web directo, abrir whatsapp sin guardar, api whatsapp, generador qr whatsapp"
+    />
+
     <meta name="theme-color" content="#22c55e" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tu-proyecto.vercel.app/" /> <meta property="og:site_name" content="WhatsApp Directo" />
-    
-    <meta property="og:title" content="🚀 Enviar WhatsApp sin guardar contacto" />
-    <meta property="og:description" content="No llenes tu agenda de números que solo usarás una vez. Abre el chat directo aquí. Gratis y sin registro." />
-    
-    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" />
+    <meta property="og:url" content="https://opendirectchat.vercel.app/" />
+    <meta property="og:site_name" content="WhatsApp Directo" />
+
+    <meta
+      property="og:title"
+      content="🚀 Enviar WhatsApp sin guardar contacto"
+    />
+    <meta
+      property="og:description"
+      content="No llenes tu agenda de números que solo usarás una vez. Abre el chat directo aquí. Gratis y sin registro."
+    />
+
+    <meta
+      property="og:image"
+      content="https://cdn-icons-png.flaticon.com/512/3670/3670051.png"
+    />
 
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:title" content="WhatsApp Directo - Rápido y Sin Contactos" />
-    <meta property="twitter:description" content="Abre conversaciones de WhatsApp sin guardar el número. Ideal para ventas, delivery o mensajes rápidos." />
+    <meta
+      property="twitter:title"
+      content="WhatsApp Directo - Rápido y Sin Contactos"
+    />
+    <meta
+      property="twitter:description"
+      content="Abre conversaciones de WhatsApp sin guardar el número. Ideal para ventas, delivery o mensajes rápidos."
+    />
 
     <script type="application/ld+json">
       {
@@ -47,17 +71,56 @@ import OpenDirectChat from '../components/OpenDirectChat.jsx';
     </script>
 
     <script is:inline>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
       }
     </script>
-  </head>
-  
-  <body class="bg-slate-100 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
-    
-    <OpenDirectChat client:load />
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4659199146828242"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body
+    class="bg-slate-100 dark:bg-gray-900 min-h-screen transition-colors duration-300 flex flex-col items-center"
+  >
+    <!-- Banner Superior -->
+    <div class="w-full max-w-5xl px-4 py-4">
+      <AdBanner slotId="top-banner" className="h-24 w-full rounded-xl" />
+    </div>
+
+    <!-- Contenido Principal con Laterales -->
+    <main
+      class="w-full max-w-[1400px] flex flex-row justify-center gap-4 px-4 pb-8"
+    >
+      <!-- Banner Lateral Izquierdo (Oculto en mobile/tablet) -->
+      <aside class="hidden xl:block w-40 shrink-0">
+        <AdBanner
+          slotId="side-left"
+          className="h-[600px] w-full sticky top-4 rounded-xl"
+        />
+      </aside>
+
+      <!-- App Central -->
+      <div class="flex-1 max-w-5xl flex justify-center">
+        <OpenDirectChat client:load />
+      </div>
+
+      <!-- Banner Lateral Derecho (Oculto en mobile/tablet) -->
+      <aside class="hidden xl:block w-40 shrink-0">
+        <AdBanner
+          slotId="side-right"
+          className="h-[600px] w-full sticky top-4 rounded-xl"
+        />
+      </aside>
+    </main>
+
+    <!-- Script de AdSense (Comentado hasta tener el ID real) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
   </body>
 </html>
