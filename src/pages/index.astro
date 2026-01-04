@@ -1,6 +1,7 @@
 ---
 import OpenDirectChat from "../components/OpenDirectChat.jsx";
 import AdBanner from "../components/AdBanner.jsx";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <html lang="es">
@@ -86,6 +87,7 @@ import AdBanner from "../components/AdBanner.jsx";
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4659199146828242"
       crossorigin="anonymous"></script>
+    <Analytics />
   </head>
 
   <body
